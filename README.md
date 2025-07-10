@@ -103,9 +103,12 @@ Adicione:
 # Parte 3: Criando a Estrutura do projeto
 
 Utilizaremos as camadas:
+
+```text
 │ ├── application/ # 💡 Camada de aplicação: orquestra os casos de uso, conectando domínio e interfaces externas
 │ ├── domain/ # 🧠 Camada de domínio: entidades, regras de negócio puras e invariantes da aplicação
 │ ├── infrastructure/ # 🛠️ Camada de infraestrutura: implementação técnica dos adaptadores que se comunicam com o exterior
+```
 
 **Passo 1: Veja como esta a sua estrura de arquivos atual do seu projeto**
 
@@ -146,22 +149,22 @@ Iremos criar:
 │   │   │   ├── input/                      # ↩️ Portas de entrada: interfaces dos casos de uso oferecidos (ex: CriarUsuarioPort)
 │   │   │   └── output/                     # ↪️ Portas de saída: interfaces para serviços externos (ex: UsuarioRepositoryPort)
 │   │   └── usecase/                        # ⚙️ Implementações dos casos de uso definidos nas portas de entrada (ex: CriarUsuarioUseCase)
-│   │
-│   ├── domain/                             # 🧠 Camada de domínio: entidades, regras de negócio puras e invariantes da aplicação
-│   │                                       #     → Essa camada é independente de tecnologia, frameworks ou APIs externas
-│   │
-│   ├── infrastructure/                     # 🛠️ Camada de infraestrutura: implementação técnica dos adaptadores que se comunicam com o exterior
-│   │   ├── adapter/                        # 🔌 Adaptadores: concretizam a comunicação entre o mundo externo e o domínio
-│   │   │   ├── input/                      # 🌐 Adaptadores de entrada: ex. controllers REST, handlers de eventos, CLI, etc.
-│   │   │   │   └── controller/             #     → Controladores REST (ex: UsuarioController)
-│   │   │   │   └── consumer/               #     → Consumidor (fila do kafta)
-│   │   │   │
-│   │   │   └── output/                     # 🗄️ Adaptadores de saída: ex. repositórios JPA, integrações com APIs externas
-│   │   │       └── repository/             #     → Implementações de persistência. Acesso ao banco de dados
-│   │   │       └── client/                 #     → Utilizando para acessar o microserviço que irá buscar o endereço do cliente
-│   │
-│   └── config                              #     → configurações do projeto
-│   └── HexagonalApplication.java
+│
+│   ├── domain/                             # 🧠 Camada de domínio: entidades e regras de negócio puras, independentes de tecnologia
+│
+│   ├── infrastructure/                     # 🛠️ Camada de infraestrutura: conecta a aplicação ao mundo externo (web, banco, serviços, etc)
+│   │   ├── adapter/                        # 🔌 Adaptadores concretos (entrada e saída)
+│   │   │   ├── input/                      # 🌐 Adaptadores de entrada (ex: controllers, consumers de eventos)
+│   │   │   │   ├── controller/             #     → Controladores REST (ex: UsuarioController)
+│   │   │   │   └── consumer/               #     → Consumidores de eventos (ex: KafkaConsumer)
+│   │   │   └── output/                     # 🗄️ Adaptadores de saída (ex: repositórios, clientes HTTP)
+│   │   │       ├── repository/             #     → Implementações de persistência (ex: JPA/Hibernate)
+│   │   │       └── client/                 #     → Clientes para comunicação com outros serviços (ex: OpenFeign, REST)
+│
+│   ├── config/                             # ⚙️ Configurações gerais da aplicação (ex: beans, segurança, CORS, etc.)
+│
+│   └── HexagonalApplication.java           # 🚀 Classe principal da aplicação Spring Boot (ponto de entrada)
+
 ```
 
 **Domain(Entity)** entidades e regras de negócios
