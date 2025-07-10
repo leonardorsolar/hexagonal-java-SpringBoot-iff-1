@@ -1,8 +1,6 @@
-# Tutorial CRUD de Usuários - Java Spring Boot + SQLite
+# Tutorial Arquitetura Hexagonal - CRUD de Usuários - Api - MongoDB (nosql) - Kafka(mensageria)
 
-## Sumário Executivo
-
-Este tutorial apresenta a implementação de um sistema CRUD (Create, Read, Update, Delete) completo para registro de usuários, utilizando Java 17+, Spring Boot.
+Aprenda na prática como aplicar a arquitetura hexagonal em microsserviços utilizando Java, Spring Boot, MongoDB e Kafka
 
 # Parte 1: Start no projeto java com spring boot
 
@@ -185,3 +183,11 @@ Pelas portas de entrda e saída
 ![Spring Boot](./doc/arquiteturahexagonal.png)
 
 **Próximos passos: Criação do crud de clientes**
+
+Você irá aprender aplicar na prática a arquitetura hexagonal em microsserviços que se comunicam com outros clients, banco de dados e mensageria.
+
+Irei utilizar a linguagem de programação Java nas aulas, porém esse curso se aplica para qualquer outra linguagem orientada a objetos.
+Mensageria (iremos utilizar o Apache Kafka)
+Banco de dados NoSQL (iremos utilizar o MongoDB)
+Nas demais seções, irei abordar a construção em detalhes de um CRUD: criação dos domains, usecases, adapters e controllers.
+E por fim, iremos fazer a criação dos consumidores e produtores de mensageria.
