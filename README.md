@@ -205,21 +205,17 @@ Durante o curso, utilizaremos a linguagem **Java** com **Spring Boot**, mas os c
 
 ### 🛠️ O que será abordado nas próximas seções:
 
-1. **Criação dos Domínios**
+2. **Criação dos Domínios**
    Definiremos as entidades centrais da aplicação e suas regras de negócio.
 
-2. **Implementação dos Casos de Uso (Use Cases)**
+3. **Implementação dos Casos de Uso (Use Cases)**
    Orquestraremos as operações principais do sistema com foco na lógica de aplicação.
 
-3. **Criação dos Adapters**
+4. **Criação dos Adapters**
    Implementaremos as entradas (como controllers) e saídas (como persistência e mensageria) da aplicação, respeitando o princípio da inversão de dependência.
 
-4. **Construção dos Controllers**
+5. **Construção dos Controllers**
    Exporão os endpoints da API REST para interação com clientes externos.
 
-5. **Configuração da Mensageria**
+6. **Configuração da Mensageria**
    Criação dos **consumidores e produtores Kafka**, que permitirão a comunicação assíncrona entre sistemas.
-
----
-
-Se quiser, posso criar um roteiro visual (como uma linha do tempo ou checklist) para esse processo. Deseja isso também?
