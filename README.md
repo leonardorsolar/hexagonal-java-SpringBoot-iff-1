@@ -2,6 +2,10 @@
 
 Aprenda na prática como aplicar a arquitetura hexagonal em microsserviços utilizando Java, Spring Boot, MongoDB e Kafka
 
+Seja bem-vindo(a) a este tutorial prático e direto ao ponto sobre Arquitetura Hexagonal! Aqui, você aprenderá como construir um microsserviço moderno e organizado, seguindo boas práticas de engenharia de software com Java, Spring Boot, MongoDB (NoSQL) e Kafka (mensageria).
+
+Nesta primeira parte, nosso foco inicial será configurar a aplicação e baixar as dependências necessárias para começar o desenvolvimento. Vamos preparar o ambiente para que, nos próximos passos, possamos construir o domínio da aplicação, implementar o CRUD e integrar com MongoDB e Kafka com facilidade.
+
 # Parte 1: Start no projeto java com spring boot
 
 Spring Boot é um framework Java que facilita a criação de aplicações web e APIs.
@@ -185,12 +189,37 @@ Pelas portas de entrda e saída
 
 ![Spring Boot](./doc/arquiteturahexagonal.png)
 
-**Próximos passos: Criação do crud de clientes**
+Claro! Aqui está o trecho reorganizado, com melhor fluidez, clareza didática e padronização no estilo:
 
-Você irá aprender aplicar na prática a arquitetura hexagonal em microsserviços que se comunicam com outros clients, banco de dados e mensageria.
+---
 
-Irei utilizar a linguagem de programação Java nas aulas, porém esse curso se aplica para qualquer outra linguagem orientada a objetos.
-Mensageria (iremos utilizar o Apache Kafka)
-Banco de dados NoSQL (iremos utilizar o MongoDB)
-Nas demais seções, irei abordar a construção em detalhes de um CRUD: criação dos domains, usecases, adapters e controllers.
-E por fim, iremos fazer a criação dos consumidores e produtores de mensageria.
+### 🔄 Próximos Passos: Criação do CRUD de Clientes
+
+Nos próximos passos, você irá aprender como **aplicar na prática a Arquitetura Hexagonal** em um microsserviço que se comunica com:
+
+-   **Outros serviços e clientes externos**
+-   **Banco de dados NoSQL** (utilizaremos o **MongoDB**)
+-   **Mensageria assíncrona** (com o **Apache Kafka**)
+
+Durante o curso, utilizaremos a linguagem **Java** com **Spring Boot**, mas os conceitos ensinados se aplicam facilmente a qualquer linguagem **orientada a objetos**.
+
+### 🛠️ O que será abordado nas próximas seções:
+
+1. **Criação dos Domínios**
+   Definiremos as entidades centrais da aplicação e suas regras de negócio.
+
+2. **Implementação dos Casos de Uso (Use Cases)**
+   Orquestraremos as operações principais do sistema com foco na lógica de aplicação.
+
+3. **Criação dos Adapters**
+   Implementaremos as entradas (como controllers) e saídas (como persistência e mensageria) da aplicação, respeitando o princípio da inversão de dependência.
+
+4. **Construção dos Controllers**
+   Exporão os endpoints da API REST para interação com clientes externos.
+
+5. **Configuração da Mensageria**
+   Criação dos **consumidores e produtores Kafka**, que permitirão a comunicação assíncrona entre sistemas.
+
+---
+
+Se quiser, posso criar um roteiro visual (como uma linha do tempo ou checklist) para esse processo. Deseja isso também?
